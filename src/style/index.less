@@ -1,11 +1,102 @@
+.cdark {
+    color: @dark;
+}
 
 html {
+    font-size: 10px;
     background: @white;
 }
-h1 {
-    color: @white;
-    font-size: 30px;
-    margin-top: 500px;
-    transition: all 0.25s ease;
+body {
+    box-sizing: border-box;
+    color: @dark;
+    .fsize(16);
+    * {
+        box-sizing: border-box;
+    }
+}
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+.container {
+    margin: auto;
+    max-width: 1200px;
+}
+header {
+    .container {
+        padding: 4rem 3rem 2.8rem;
+        background: @gray;
+    }
+}
+.main-logo {
+    display: inline-block;
+    width: 32.8rem;
+    height: 8.3rem;
+    background: url(../images/main-logo.png) no-repeat 100% 100%;
+}
+.header {
+    &__left {
+        display: inline-block;
+        float: left;
+        width: 74.2%;
+    }
+    &__right {
+        display: inline-block;
+        float: right;
+        width: 23.2%;
+    }
+    &__text {
+        margin: 0;
+        text-transform: uppercase;
+        .fsize(16);
+        color: @dark;
+    }
+    &__buttons {
+        color: @dark;
+    }
+    &__search {
+
+    }
 
 }
+
+.main-menu {
+    li {
+        display: inline-block;
+        list-style: none;
+        a {
+            color: @blue;
+            text-decoration: none;
+            text-transform: uppercase;
+            .fsize(15);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

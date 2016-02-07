@@ -1,2 +1,11 @@
+@baseFont: 10;
+.fsize(@sizeValue: @baseFont, @content: @baseFont) {
+    @remValue: @sizeValue/10;
+    font-size: ~"@{remValue}rem";
+}
+
 /*colors*/
 @white: #fff;
+@gray: #d6d6d6;
+@dark: #030303;
+@blue: #0b7a7a;
