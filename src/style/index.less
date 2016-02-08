@@ -66,15 +66,28 @@ main {
         li {
             display: inline-block;
             list-style: none;
+            &.neutral {
+
+            }
+            &.food {
+
+            }
             a {
+                display: block;
                 text-decoration: none;
                 text-transform: uppercase;
                 .fsize(17);
                 color: @dark;
+                background: @gray;
+                border-top: 1px solid @grayDark;
+                border-right: 1px solid @grayDark;
+                border-left: 1px solid @grayDark;
+                border-bottom: 1px solid @grayDark;
+                margin-bottom: -1px;
+                &.active {
+                    border-bottom: 1px solid @gray;
+                }
             }
-        }
-        &.active {
-
         }
     }
     &__content {
