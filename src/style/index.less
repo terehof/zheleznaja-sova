@@ -1,3 +1,7 @@
+.trans(@time: 0.25s) {
+    transition: all @time;
+}
+
 .cdark {
     color: @dark;
 }
@@ -9,6 +13,9 @@ html {
 body {
     box-sizing: border-box;
     color: @dark;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    /*font-weight: 400; - normal */
     .fsize(16);
     * {
         box-sizing: border-box;
@@ -25,60 +32,60 @@ body {
     margin: auto;
     max-width: 1200px;
 }
-header {
-    .container {
-        padding: 4rem 3rem 2.8rem;
-        background: @gray;
-    }
+main {
+    padding: 3rem 0 0;
 }
-.main-logo {
-    display: inline-block;
-    width: 32.8rem;
-    height: 8.3rem;
-    background: url(../images/main-logo.png) no-repeat 100% 100%;
-}
-.header {
+.main {
     &__left {
         display: inline-block;
         float: left;
-        width: 74.2%;
+        width: 73.3%;
     }
     &__right {
         display: inline-block;
         float: right;
-        width: 23.2%;
+        width: 24.7%;
     }
-    &__text {
-        margin: 0;
-        text-transform: uppercase;
-        .fsize(16);
-        color: @dark;
-    }
-    &__buttons {
-        color: @dark;
-    }
-    &__search {
-
-    }
-
+}
+.aside-title {
+    margin: 0 0 2.5rem;
+    text-align: right;
+    text-transform: uppercase;
+    color: @menuColor;
+    .fsize(@menuFontSize);
 }
 
-.main-menu {
-    li {
-        display: inline-block;
-        list-style: none;
-        a {
-            color: @blue;
-            text-decoration: none;
-            text-transform: uppercase;
-            .fsize(15);
+
+.tabs {
+    &-block {
+
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            list-style: none;
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                .fsize(17);
+                color: @dark;
+            }
+        }
+        &.active {
+
+        }
+    }
+    &__content {
+        display: none;
+        background: @gray;
+        border: 1px solid @grayDark;
+        &.active {
+            display: block;
         }
     }
 }
-
-
-
-
 
 
 
