@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     cssmin = require('gulp-cssmin'),
     jsmin = require('gulp-jsmin'),
     rename = require('gulp-rename'),
+    util = require('gulp-util'),
     //less = require('gulp-less'),
     less = require('gulp-less-sourcemap'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -67,7 +68,7 @@ gulp.task('style', function () {
             sourceMap: {
                 sourceMapRootpath: path.src.style
             }
-        }))
+        })).on('error', util.log)
         /*.pipe(autoprefixer({
             browsers: ['> 1%'],
             cascade: false
@@ -89,14 +90,14 @@ gulp.task('style-min', function () {
 });
 gulp.task('js', function () {
     return gulp.src(['bower_components/jquery/dist/jquery.min.js', path.src.js])
-        .pipe(uglify())
+        .pipe(uglify()).on('error', util.log)
         //.pipe(concat('main.js'))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream:true }));
 });
 gulp.task('js-min', function () {
     return gulp.src(['bower_components/jquery/dist/jquery.min.js', path.src.js])
-        .pipe(uglify())
+        .pipe(uglify()).on('error', util.log)
         .pipe(concat('main.js'))
         .pipe(jsmin())
         .pipe(rename({suffix: '.min'}))
