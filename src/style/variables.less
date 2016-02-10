@@ -3,6 +3,9 @@
     @remValue: @sizeValue/10;
     font-size: ~"@{remValue}rem";
 }
+.trans(@time: 0.25s) {
+    transition: all @time;
+}
 
 /*colors*/
 @white: #fff;
@@ -13,6 +16,9 @@
 @orange: #f79d54;
 @orangeDark: #b68c69;
 
-@menuFontSize: 17;
+@menuFontSize: 15;
 @menuColor: #0b7a7a;
 @menuColorActive: #11adbb;
+
+@titleColor: #0b7a7a;
+@titleSize: 20;
