@@ -75,11 +75,11 @@ main {
                 position: relative;
                 z-index: 1;
                 display: block;
-                padding: 2rem 2.8rem;
+                padding: 2rem 1.5rem;
                 text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
-                .fsize(16);
+                .fsize(17);
                 color: @dark;
                 background: @white;
                 border-top: 1px solid @white;
@@ -119,6 +119,7 @@ h2 {
 p {
     .fsize(16);
     margin: 2.5rem 0;
+    line-height: 1.35;
 }
 .items-wrap {
 
@@ -130,7 +131,8 @@ p {
         margin: 3.3rem 0 0 3.07%;
         &__title {
             color: @dark;
-            .fsize(12);
+            .fsize(11.2);
+            font-weight: 600;
             text-transform: uppercase;
             margin: 1.2rem 0 0;
             &--light {
@@ -174,7 +176,8 @@ p {
 footer {
     margin: 6rem 0 0;
     p {
-        .fsize(15);
+        .fsize(16.6);
+        letter-spacing: -0.08rem;
         margin: 0 2.2rem 1.5rem 0;
         display: inline-block;
     }
@@ -193,7 +196,7 @@ footer {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
-    .fsize(17);
+    .fsize(16.6);
     color: @menuColor;
     transition: all 0.25s;
     &:hover {
@@ -201,6 +204,55 @@ footer {
     }
 }
 
+.dostavka-text {
+    p {
+        margin: 0.7rem 0;
+    }
+}
+
+.partners {
+
+}
+.partner {
+    display: inline-block;
+    float: left;
+    width: 33.3%;
+    margin: 4.5rem 0 0;
+    padding: 0 2rem;
+    text-align: center;
+    &:nth-child(3) {
+        .partner__image {
+            img {
+                max-width: 90%;
+            }
+        }
+    }
+    &__image {
+        position: relative;
+        height: 12rem;
+        img {
+            .centered;
+            max-width: 60%;
+            max-height: 100%;
+        }
+    }
+    &__link {
+        margin: 1rem 0;
+        font-family: 'Verdana';
+        .fsize(12);
+        a {
+            color: @dark;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__text {
+        height: 4rem;
+        .fsize(14);
+    }
+
+}
 
 
 
