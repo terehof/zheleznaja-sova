@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     color: @dark;
     font-family: 'Exo 2', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     .fsize(16);
     * {
         box-sizing: border-box;
@@ -24,7 +24,7 @@ body {
     max-width: 1200px;
 }
 main {
-    padding: 3rem 0 0;
+    padding: 3rem 0 6rem;
 }
 .main {
     &__left {
@@ -113,7 +113,7 @@ h2 {
     color: @titleColor;
     .fsize(@titleSize);
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     margin: 4rem 0 0.5rem;
 }
 p {
@@ -159,11 +159,22 @@ p {
             }
         }
     }
+    &--services {
+        .item {
+            &__title {
+
+            }
+            &__image {
+
+            }
+        }
+    }
 }
 
 footer {
-    margin: 5rem 0 0;
+    margin: 6rem 0 0;
     p {
+        .fsize(15);
         margin: 0 2.2rem 1.5rem 0;
         display: inline-block;
     }

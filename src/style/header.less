@@ -22,7 +22,7 @@ header {
     &__right {
         display: inline-block;
         float: right;
-        width: 23.2%;
+        width: 23.3%;
         padding: 2rem 0 0;
     }
     &__text {
@@ -103,8 +103,11 @@ header {
             .fsize(@menuFontSize);
             transition: all 0.25s;
             &:hover,
-            &.hover,
+            &.hover {
+                color: @menuColorActive;
+            }
             &.active {
+                cursor: default;
                 color: @menuColorActive;
             }
         }
@@ -115,6 +118,9 @@ header {
 }
 nav {
     margin: 0 0 0.6rem;
+    + p {
+        margin-top: 0;
+    }
 }
 
 
