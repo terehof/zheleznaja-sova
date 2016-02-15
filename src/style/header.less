@@ -28,7 +28,7 @@ header {
     &__text {
         margin: 3rem 0 0;
         text-transform: uppercase;
-        .fsize(15.7);
+        .fsize(15.6);
         color: @dark;
     }
     &__phones {
@@ -97,6 +97,13 @@ header {
     li {
         display: inline-block;
         list-style: none;
+        vertical-align: top;
+        > span {
+            display: block;
+            vertical-align: top;
+            margin-top: -0.4rem;
+            color: @menuLines;
+        }
         a {
             display: inline-block;
             vertical-align: top;
