@@ -1,0 +1,154 @@
+.product-info {
+    &__left {
+        display: inline-block;
+        float: left;
+        width: 28%;
+    }
+    &__image {
+        display: inline-block;
+        float: left;
+        width: 36%;
+        font-family: 'Verdana';
+        .fsize(12.5);
+    }
+    &__descrip {
+        font-family: 'Verdana';
+        font-weight: 400;
+        .fsize(12.5);
+        display: inline-block;
+        float: right;
+        width: 36%;
+        line-height: 1.2;
+    }
+}
+.prod-image {
+    &__image {
+
+        img {
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+    &__title {
+        margin: 1.5rem 0 0;
+    }
+}
+.product-table {
+    margin: 3rem 0 0;
+    font-family: 'Verdana';
+    font-weight: 400;
+    .fsize(12.5);
+    table {
+        width: 100%;
+        position: relative;
+    }
+    thead {
+        position: relative;
+        margin: 0 0 1.5rem;
+        border-top: 1px solid @prodTableHeadBorder;
+        border-bottom: 1px solid @prodTableHeadBorder;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -25%;
+            width: 150%;
+            height: 1px;
+            background: @prodTableHeadBorder;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 4.9rem;
+            left: -25%;
+            width: 150%;
+            height: 1px;
+            background: @prodTableHeadBorder;
+        }
+    }
+    th {
+        padding: 0.8rem 0;
+        text-transform: uppercase;
+        font-weight: 400;
+        &:first-child {
+            text-align: left;
+        }
+        span {
+            text-transform: lowercase;
+            display: block;
+
+        }
+    }
+    tr {
+        td {
+            padding: 0.6rem 0;
+            text-align: center;
+            &:first-child {
+                text-align: left;
+            }
+        }
+        &.empty {
+
+        }
+    }
+    tbody {
+        tr {
+            &:not(.empty) {
+                position: relative;
+                cursor: pointer;
+                transition: background 0.25s;
+                td {
+                    position: relative;
+                    z-index: 1;
+                    &:first-child {
+                        &:before {
+                            position: absolute;
+                            opacity: 0;
+                            z-index: 0;
+                            content: '';
+                            display: block;
+                            top: 0;
+                            right: 100%;
+                            height: 100%;
+                            width: 150%;
+                            background: fade(@prodTableHover, 30%);
+                            transition: opacity 0.25s;
+                        }
+                    }
+                    &:last-child {
+                        &:after {
+                            position: absolute;
+                            opacity: 0;
+                            z-index: 0;
+                            content: '';
+                            display: block;
+                            top: 0;
+                            left: 100%;
+                            height: 100%;
+                            width: 50%;
+                            background: fade(@prodTableHover, 30%);
+                            transition: opacity 0.25s;
+                        }
+                    }
+                }
+                &:hover {
+                    background: fade(@prodTableHover, 30%);
+                    td {
+                        &:first-child {
+                            &:before {
+                                opacity: 1;
+                            }
+                        }
+                        &:last-child {
+                            &:after {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

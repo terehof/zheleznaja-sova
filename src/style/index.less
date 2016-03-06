@@ -56,7 +56,9 @@ main {
 }
 .tabs {
     &-block {
-
+        &-main-page {
+            margin-bottom: 5.5rem;
+        }
     }
     &__list {
         margin: 0;
@@ -104,6 +106,7 @@ main {
         background: @gray;
         border: 1px solid @grayDark;
         padding: 3rem;
+        overflow: hidden;
         &.active {
             display: block;
         }
@@ -118,10 +121,12 @@ h2 {
 }
 p {
     .fsize(16);
-    margin: 2.5rem 0;
+    margin: 2rem 0;
+    letter-spacing: -0.05rem;
     line-height: 1.35;
 }
 .items-wrap {
+    padding: 0 0 1.5rem;
 
     .item {
         display: inline-block;
@@ -138,10 +143,12 @@ p {
             &--light {
                 margin: 0;
                 .fsize(15);
+                font-weight: 400;
                 line-height: 1.4;
             }
             &--small {
                 margin: 0;
+                font-weight: 400;
                 .fsize(9);
             }
         }
@@ -253,11 +260,121 @@ footer {
     }
 
 }
+.catalog-item {
+    text-align: left;
+    line-height: 1.4;
 
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: @dark;
+        .fsize(12.5);
+        transition: all 0.2s;
+        &:hover {
+            color: @blue;
+        }
 
+    }
+    &__title {
+        margin: 1.5rem 0 0;
+        height: 4rem;
+        padding-right: 9rem;
+        position: relative;
+        .fsize(11.5);
+        text-align: left;
+        a {
+            position: absolute;
+            bottom: 0;
+            right: 3rem;
+            text-decoration: underline;
+            color: @catalogMore;
+            text-transform: lowercase;
+            .fsize(10.5);
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.catalog-accordion {
+    text-transform: uppercase;
+    .accordion-inner{
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .accordion-toggle {
+        &.active {
+            color: @blue;
+        }
+    }
+    padding: 0;
+    margin: 0;
+    > li {
+        list-style: none;
+        margin: .4rem 0;
+        ul {
+            padding: 0.2rem 0 0 2rem;
+            margin: 0;
+            li {
+                list-style: none;
+                margin: 0;
+            }
+        }
+    }
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: @dark;
+        .fsize(12.5);
+        transition: all 0.2s;
+        &:hover {
+            color: @blue;
+        }
 
+    }
+}
 
+.hot-sale {
+    position: relative;
 
+}
+.sale-block {
+    position: absolute;
+    z-index: 1;
+    top: -4rem;
+    left: 0;
+    padding: 0.5rem 2.9rem 1.4rem 1.2rem;
+    font-family: 'Verdana';
+    line-height: 1.4;
+    background: url(../images/sale-bg.png);
+    background-size: 100% 100%;
+    &__title {
+        color: @white;
+        .fsize(21);
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+    }
+    &__name {
+        .fsize(8);
+        font-weight: 500;
+        color: @dark;
+    }
+    &__price {
+        .fsize(16.4);
+        .old {
+            text-decoration: line-through;
+            color: @dark;
+            font-weight: 400;
+        }
+        .new {
+            .fsize(15.5);
+            color: @white;
+            font-weight: 700;
+        }
+    }
+}
 
 
 
