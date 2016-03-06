@@ -53,6 +53,19 @@ main {
     text-transform: uppercase;
     color: @menuColor;
     .fsize(@menuFontSize);
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: @menuColor;
+        &:hover,
+        &.hover {
+            color: @menuColorActive;
+        }
+        &.active {
+            cursor: default;
+            color: @menuColorActive;
+        }
+    }
 }
 .tabs {
     &-block {
@@ -132,6 +145,7 @@ p {
         display: inline-block;
         float: left;
         text-align: center;
+        text-decoration: none;
         width: 30%;
         margin: 3.3rem 0 0 3.07%;
         &__title {
@@ -176,6 +190,11 @@ p {
             &__image {
 
             }
+        }
+    }
+    &--proizvodstvo {
+        .item__title {
+            font-weight: 200;
         }
     }
 }
@@ -377,10 +396,126 @@ footer {
 }
 
 
+.crewman-name {
+    display: block;
+    .fsize(16);
+    font-weight: 200;
+    text-transform: none;
+}
+.crewman-position {
+    display: block;
+    .fsize(12.5);
+    font-weight: 200;
+    text-transform: none;
+}
 
+.text-justify {
+    text-align: justify;
+}
 
+.contacts-map {
+    display: inline-block;
+    float: left;
+    margin: 0 0 3.5rem 0;
+    width: 64.2%;
+    height: 35rem;
+    iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+.contacts-info {
+    display: inline-block;
+    float: right;
+    width: 33%;
+    font-weight: 400;
+    &__title {
+        display: block;
+        margin: 0 0 2rem;
+        .fsize(16);
+    }
+    &__text {
+        display: block;
+        margin: 3rem 0 0;
+        .fsize(14);
+        line-height:1.3;
+    }
+    &__item {
+        display: block;
+        height: 2rem;
+        padding: 0 0 0 4.7rem;
+        margin: 1.5rem 0;
+        .fsize(13);
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        &.item-phone {
+            height: 2.5rem;
+            line-height: 2.5rem;
+            background-image: url(../images/contacts-1.png);
+        }
+        &.item-email {
+            height: 2.5rem;
+            line-height: 2.5rem;
+            background-image: url(../images/contacts-2.png);
+        }
+        &.item-address {
+            height: 5rem;
+            background-image: url(../images/contacts-3.png);
+        }
+        &.item-schedule {
+            height: 3.5rem;
+            line-height: 1;
+            padding: 0.3rem 0 0.3rem 4.7rem;
+            background-image: url(../images/contacts-4.png);
+        }
+        a {
+            text-decoration: none;
+            color: @black;
+        }
+    }
+}
 
-
+.filials {
+    display: block;
+    clear: both;
+    margin: 0 0 2rem;
+    &__title {
+        display: block;
+        clear: both;
+        text-transform: uppercase;
+        font-weight: 200;
+        .fsize(20);
+    }
+}
+.filial {
+    display: inline-block;
+    float: left;
+    margin: 3rem 0 0 2%;
+    width: 32%;
+    &:first-child(1) {
+        margin-top: 0;
+    }
+    &:first-child(2) {
+        margin-top: 0;
+    }
+    &:first-child(3) {
+        margin-top: 0;
+    }
+    &:nth-child(3n + 1) {
+        margin-left: 0;
+    }
+    font-weight: 200;
+    &__name {
+        .fsize(14);
+        margin: 0 0 0.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    address {
+        .fsize(16);
+        font-style: normal;
+    }
+}
 
 
 
