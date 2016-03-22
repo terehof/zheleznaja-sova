@@ -25,7 +25,37 @@
             </div>
             <div class="header__buttons clearfix">
                 <button class="btn btn_header">Скачать прайс</button>
-                <button class="btn btn_header">Заказать звонок</button>
+                <button class="btn btn_header jsRequestCallbackBtn">Заказать звонок</button>
+                <div class="modal callback-modal">
+                    <span class="btn modal_close jsModalClose"><svg viewBox="0 0 16 15"><use xlink:href="images/sprite.svg#modalClose"></use></svg></span>
+                    <form action="#" class="request-callback-form">
+                        <div class="form-main">
+                            <div class="input-wrap">
+                                <input type="tel" id="phone" name="phone" class="modal-input" placeholder="НОМЕР ТЕЛЕФОНА"/>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" id="fio" name="fio" class="modal-input" placeholder="ФАМИЛИЯ ИМЯ ОТЧЕСТВО"/>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" id="time" name="time" class="modal-input" placeholder="ЖЕЛАЕМОЕ ВРЕМЯ ЗВОНКА"/>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" id="organization" name="organization" class="modal-input" placeholder="НАЗВАНИЕ ОРГАНИЗАЦИИ"/>
+                            </div>
+                            <div class="btn-send-wrap">
+                                <button type="submit" class="btn btn_request_callback">ЗАКАЗАТЬ ЗВОНОК</button>
+                                <img src="images/loading.gif" alt="" class="modal-preloader">
+                            </div>
+                        </div>
+                        <div class="form-message success">
+                            <i></i>
+                            <p>Ваша заявка принята</p>
+                        </div>
+                        <div class="form-message error">
+                            <p>Произошла ошибка</p>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="header__search">
                 <input type="text" class="search-input" placeholder="ПОИСК ПО НАЗВАНИЮ ТОВАРА, АРТИКЛУ">
@@ -86,7 +116,7 @@
             </footer>
         </div>
         <div class="main__right">
-            <p class="aside-title">Производство</p>
+            <p class="aside-title"><a href="proizvodstvo.html">Производство</a></p>
             <a href="#">
                 <img src="images/aside-image-1.jpg" alt="">
             </a>
@@ -101,6 +131,7 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
