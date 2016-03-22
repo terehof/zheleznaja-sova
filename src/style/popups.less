@@ -1,0 +1,58 @@
+.callback-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    padding: 4rem 5rem 3rem;
+    background: #f0f0ef;
+    border: 1px solid #979797;
+    text-align: center;
+}
+.modal-input {
+    width: 28rem;
+    height: 2.6rem;
+    background: none;
+    border: 1px solid #979797;
+    margin-bottom: 1rem;
+    .fsize(10);
+    font-weight: 200;
+    padding: 0.5rem 1rem;
+    color: #040000;
+    outline: none;
+    text-align: left;
+    &:focus {
+        border: 1px solid #000;
+    }
+    &:-moz-placeholder {
+        color: #040000;
+    }
+    &::-moz-placeholder {
+        color: #040000;
+    }
+    &:-ms-input-placeholder {
+        color: #040000;
+    }
+    &::-webkit-input-placeholder {
+        color: #040000;
+    }
+}
+.modal_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: auto;
+
+        use {
+
+        }
+    }
+}

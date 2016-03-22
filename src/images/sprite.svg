@@ -7,5 +7,8 @@
 	C116.623,97.193,97.195,116.622,73.315,116.622z"/>
 </g>
 
+<g id="modalClose">
+	<image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAMAAADarb8dAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABFFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAACswNoLAAAAWnRSTlMAERkKPxJx50qV3i0uvOlfpPRkBxCo+WUDG7PxVQ+U9noBI8DoSAaH9Y8JLM/ZN3LspcYrmPg0V+LVtiZtnEPjxHz6iwg20nsEw0mfax1QBe9YFKP3WYxOiUwtt+cmAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAAuIwAALiMBeKU/dgAAAKNJREFUCNdjYGRiQABmFlYGNnYOBJ+Ti5uBh5ePH8pnFRAUEmZgEBEVE5cA8SWlpGXAErJy8gqKDAxKyiqqUKVq6hqaWto6unpwwxT1DQx1jIyRrGMwiTI1Q+abW/BaWlkj+DYatiJ29g7aUK6Eo5OzCwODqxsXxFRhZ1N3DxCD25PdC0iJeMv7QJX6erL7+TPwBgTCzQoKDgllCAtHso01IhIA4VUSS/C+APsAAAAASUVORK5CYII=" width="16" height="15"/>
+</g>
 
 </svg>

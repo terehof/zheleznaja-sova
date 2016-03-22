@@ -9,6 +9,7 @@ app.main = {
         this.tabs();
         this.carouselInit();
         this.catalogAccordion();
+        this.requestCallback();
     },
     tabs: function () {
         var $tabsBlock = $('.tabs-block');
@@ -59,7 +60,13 @@ app.main = {
             })
 
         }
+    },
+    requestCallback: function () {
+        $('.jsRequestCallbackBtn').on('click', function () {
+
+        });
     }
+
 };
 var App = (function($, app){
     function init () {

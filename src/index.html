@@ -25,7 +25,17 @@
             </div>
             <div class="header__buttons clearfix">
                 <button class="btn btn_header">Скачать прайс</button>
-                <button class="btn btn_header">Заказать звонок</button>
+                <button class="btn btn_header jsRequestCallbackBtn">Заказать звонок</button>
+                <div class="callback-modal">
+                    <span class="btn modal_close"><svg viewBox="0 0 16 15"><use xlink:href="images/sprite.svg#modalClose"></use></svg></span>
+                    <form action="#">
+                        <input type="tel" class="modal-input" placeholder="НОМЕР ТЕЛЕФОНА"/>
+                        <input type="text" class="modal-input" placeholder="ФАМИЛИЯ ИМЯ ОТЧЕСТВО"/>
+                        <input type="text" class="modal-input" placeholder="ЖЕЛАЕМОЕ ВРЕМЯ ЗВОНКА"/>
+                        <input type="text" class="modal-input" placeholder="НАЗВАНИЕ ОРГАНИЗАЦИИ"/>
+                        <button type="submit" class="btn btn_request_callback">ЗАКАЗАТЬ ЗВОНОК</button>
+                    </form>
+                </div>
             </div>
             <div class="header__search">
                 <input type="text" class="search-input" placeholder="ПОИСК ПО НАЗВАНИЮ ТОВАРА, АРТИКЛУ">
