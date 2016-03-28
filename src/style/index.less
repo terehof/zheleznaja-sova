@@ -1,6 +1,6 @@
 html {
     font-size: 10px;
-    background: @white;
+    background: @main-bg;
 }
 body {
     box-sizing: border-box;
@@ -97,10 +97,10 @@ main {
                 text-transform: uppercase;
                 .fsize(17);
                 color: @dark;
-                background: @white;
-                border-top: 1px solid @white;
-                border-right: 1px solid @white;
-                border-left: 1px solid @white;
+                background: @main-bg;
+                border-top: 1px solid @main-bg;
+                border-right: 1px solid @main-bg;
+                border-left: 1px solid @main-bg;
                 border-bottom: 1px solid @grayDark;
                 margin-bottom: -1px;
                 .trans();
@@ -520,7 +520,7 @@ p {
 }
 
 .content-404 {
-    padding: 3rem 0 0;
+    padding: 4rem 0 8rem;
     text-align: center;
     &__main {
         display: inline-block;
@@ -546,6 +546,15 @@ p {
         color: @orange;
         background: #f0f0ef;
         border: 1px solid #b2b2b2;
+        margin: 2.3rem 0 0;
+        .fsize(15.6);
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        transition: all 0.2s;
+        &:hover {
+            color: @white;
+            background: @orange;
+        }
     }
 }
 
