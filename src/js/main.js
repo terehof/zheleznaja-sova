@@ -21,6 +21,7 @@ app.main = {
         this.catalogAccordion();
         this.formValidate();
         this.scrollUp();
+        this.lightbox();
     },
     tabs: function () {
         var $tabsBlock = $('.tabs-block');
@@ -150,12 +151,33 @@ app.main = {
 
             return false;
         });
+    },
+    lightbox: function () {
+        var $lightbox = $('.lightbox');
+        if ($lightbox.length) {
+            $lightbox.fancybox({
+                padding: 0
+            });
+        }
     }
 };
 app.modals = {
     init: function () {
         this.callbackModalOpen();
         this.callbackModalClose();
+        $(document).click(function(event) {
+            if ($(event.target).closest('.callback-modal').length || $(event.target).closest('.jsRequestCallbackBtn').length) return;
+            var $modal = $('.modal'),
+                $formMain = $modal.find('.form-main'),
+                $formMessage = $modal.find('.form-message');
+            $modal.slideUp(function () {
+                $formMain.show();
+                $formMessage.hide();
+                $modal.find('input').val('');
+            });
+
+            event.stopPropagation();
+        });
     },
     callbackModalOpen: function () {
         $('.jsRequestCallbackBtn').on('click', function (e) {
