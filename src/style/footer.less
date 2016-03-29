@@ -1,0 +1,86 @@
+footer {
+    padding: 1.5rem 0 0;
+}
+.footer {
+    color: #040b0b;
+    &__menu {
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: justify;
+            li {
+                display: inline-block;
+                list-style: none;
+                margin: 0 0.7rem;
+                vertical-align: top;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &.last {
+                    float: right;
+                }
+                > span {
+                    display: block;
+                    vertical-align: top;
+                    margin-top: -0.4rem;
+                    color: @menuLines;
+                }
+                a {
+                    display: inline-block;
+                    vertical-align: top;
+                    color: @menuColor;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    .fsize(@menuFontSize);
+                    transition: all 0.25s;
+                    &:hover,
+                    &.hover {
+                        color: @menuColorActive;
+                    }
+                    &.active {
+                        cursor: default;
+                        color: @menuColorActive;
+                    }
+                }
+                &.helper {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__main {
+        margin: 3rem auto 0 !important;
+        padding: 0.5rem 2.5rem;
+        background: @gray;
+        border-top: 1px solid @grayDark;
+        border-right: 1px solid @grayDark;
+        border-left: 1px solid @grayDark;
+        .clearfix;
+        .copyright {
+            display: inline-block;
+            text-transform: uppercase;
+            .fsize(16.2);
+            span {
+                display: inline-block;
+                margin-left: 1.5rem;
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
+        .powered-by {
+            display: inline-block;
+            float: right;
+            a {
+                color: inherit;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

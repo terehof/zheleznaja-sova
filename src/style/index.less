@@ -24,13 +24,14 @@ body {
     max-width: 1200px;
 }
 main {
-    padding: 3rem 0 6rem;
+    padding: 3rem 0 0;
 }
 .main {
     &__left {
         display: inline-block;
         float: left;
         width: 73.3%;
+        padding: 0 0 6rem;
     }
     &__right {
         display: inline-block;
@@ -227,6 +228,7 @@ p {
     .fsize(16.6);
     color: @menuColor;
     transition: all 0.25s;
+    cursor: pointer;
     &:hover {
         color: @menuColorActive;
     }
@@ -557,5 +559,4 @@ p {
         }
     }
 }
-
 

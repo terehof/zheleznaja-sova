@@ -20,6 +20,7 @@ app.main = {
         this.carouselInit();
         this.catalogAccordion();
         this.formValidate();
+        this.scrollUp();
     },
     tabs: function () {
         var $tabsBlock = $('.tabs-block');
@@ -140,6 +141,16 @@ app.main = {
             }
         });
     },
+    scrollUp: function () {
+        $('.go-to-top').click(function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 600);
+
+            return false;
+        });
+    }
 };
 app.modals = {
     init: function () {
@@ -181,4 +192,16 @@ var App = (function($, app){
 })(jQuery, app);
 $(function () {
     App.init();
+});
+$(window).load(function () {
+    function rightScroll() {
+        var $scrollPane = $('.scroll-pane');
+        if ($scrollPane.length > 0) {
+            var leftH = $('.main__left').height() - $('.main__left nav').height();
+            $scrollPane.css('height', leftH);
+
+            $scrollPane.jScrollPane();
+        }
+    }
+    rightScroll();
 });
